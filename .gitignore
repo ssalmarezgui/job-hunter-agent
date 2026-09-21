@@ -1,0 +1,23 @@
+# Python 
+venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+
+# Donnees locales
+data/condidatures.db
+data/output/*
+!data/output/.gitkeep
+
+# Latex
+*.aux
+*.log
+*.out
+*.toc
+
+
+# IDE
+.vscode/
+.idea/
