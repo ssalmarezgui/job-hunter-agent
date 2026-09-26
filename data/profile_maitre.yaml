@@ -1,0 +1,70 @@
+identite:
+  nom_complet: "Salma REZGUI"
+  titre_base: "Élève Ingénieure en Informatique - ENSI (3ème de promotion)"
+  telephone: "+216 54002220"
+  email: "salma.rezgui@ensi-uma.tn"
+  linkedin: "linkedin.com/in/salma-rezgui"
+  github: "github.com/ssalmarezgui"
+
+formation:
+  - ecole: "École Nationale des Sciences de l'Informatique (ENSI)"
+    periode: "2024 - Présent"
+    description: "Cycle d'ingénieur en informatique – 2ème année (Classée 3ème de promotion)"
+  - ecole: "Institut Préparatoire aux Études d'Ingénieurs de Nabeul (IPEIN)"
+    periode: "2022 - 2024"
+    description: "Diplôme du premier cycle préparatoire scientifique – Filière MP"
+
+experiences:
+  # Votre nouveau stage d'été (très valorisant pour DevSecOps / Web / Data)
+  - titre: "Stage d'été -- Conception, Dév. & Sécurisation Web"
+    organisation: "Plateforme de Suivi Clinique (Transplantation Rénale)"
+    periode: "06/2025 -- 08/2025"
+    domaine: ["DevSecOps", "Data", "FullStack"]
+    points_cles:
+      - "Conception et modélisation de la base de données relationnelle pour le suivi longitudinal des greffes."
+      - "Développement full-stack de la plateforme avec gestion stricte des accès par rôles (RBAC)."
+      - "Sécurisation proactive : prévention des failles OWASP, chiffrement des données de santé et sessions sécurisées."
+    technologies: "Python, PostgreSQL, Sécurité Web, Docker, Git"
+
+  - titre: "Stage d'été -- Développement Mobile & Cloud"
+    organisation: "Instaal Studio"
+    periode: "06/2025 -- 07/2025"
+    domaine: ["Mobile", "Computer Vision", "Cloud"]
+    points_cles:
+      - "Développement d'une application Flutter générant des images à partir de texte et d'images."
+      - "Intégration d'APIs REST, gestion de l'infrastructure cloud et optimisation du stockage."
+    technologies: "Flutter, Dart, REST API, Firebase, Cloudinary"
+
+projets:
+  # PROJET 1 : COMPUTER VISION
+  - titre: "Air Canvas -- Suivi Gestuel & Vision par Ordinateur"
+    periode: "02/2026 -- 03/2026"
+    domaine: ["Computer Vision", "IA"]
+    points_cles:
+      - "Application interactive de dessin virtuel via suivi gestuel de la main en temps réel."
+      - "Détection précise des points de repère avec MediaPipe et traitement de flux vidéo via OpenCV."
+    technologies: "Python, OpenCV, MediaPipe, NumPy"
+
+  # PROJET 2 : CYBERSÉCURITÉ / DEVSECOPS
+  - titre: "Détection d'attaque par force brute sur SSH avec IA"
+    periode: "02/2026 -- 03/2026"
+    domaine: ["DevSecOps", "Cybersécurité", "IA"]
+    points_cles:
+      - "Simulation d'attaques sous lab (Kali Linux, Hydra, Metasploitable) et extraction de logs d'authentification."
+      - "Entraînement d'un modèle ML pour détecter la signature de force brute indépendamment de l'adresse IP source."
+      - "Développement d'un dashboard interactif Cyber SOC avec Streamlit pour l'analyse de risque temps réel."
+    technologies: "Python, Scikit-learn, Pandas, Streamlit, Kali Linux, Hydra"
+
+  # PROJET 3 : IA EXPLICABLE / DATA
+  - titre: "XAI en Transplantation Rénale -- Laboratoire Riadi / Hôpital Charles-Nicolle"
+    periode: "10/2025 -- 05/2026"
+    domaine: ["Data", "IA"]
+    points_cles:
+      - "Système d'Aide à la Décision prédictif pour les néphrologues avec explicabilité clinique (SHAP / LIME)."
+      - "Module administratif complet : persistance PostgreSQL et automatisation de rapports cliniques."
+    technologies: "Python, Scikit-learn, SHAP, LIME, PostgreSQL, Streamlit"
+
+competences_globales:
+  langages: "Python, Java, C, C++, Dart, JavaScript, PHP, SQL"
+  ia_data: "Pandas, NumPy, Scikit-learn, PySpark, OpenCV, MediaPipe, SHAP, LIME"
+  securite_ops: "OWASP, Cryptographie, Linux, Docker, Git, Réseaux TCP/IP (Cisco)"

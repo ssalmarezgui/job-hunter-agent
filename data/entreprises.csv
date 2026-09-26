@@ -1,0 +1,3 @@
+id;entreprise;email_recruteur;nom_contact;titre_poste;domaine;technologies_cibles;notes
+1;VisionTech Labs;contact@visiontech.tn;Responsable Recrutement;Stage PFE - Computer Vision;Computer Vision;OpenCV, PyTorch, MediaPipe;Projets innovants de suivi vidéo
+2;CyberDefense Corp;recrutement@cyberdef.fr;M. Le Lead Sécurité;Stage PFE - DevSecOps & Sécurité;DevSecOps;Docker, CI/CD, Détection d'intrusion, OWASP;Sécurisation des architectures cloud
