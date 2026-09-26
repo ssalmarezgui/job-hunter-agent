@@ -15,56 +15,66 @@ formation:
     description: "Diplôme du premier cycle préparatoire scientifique – Filière MP"
 
 experiences:
-  # Votre nouveau stage d'été (très valorisant pour DevSecOps / Web / Data)
-  - titre: "Stage d'été -- Conception, Dév. & Sécurisation Web"
-    organisation: "Plateforme de Suivi Clinique (Transplantation Rénale)"
-    periode: "06/2025 -- 08/2025"
-    domaine: ["DevSecOps", "Data", "FullStack"]
+  # --- EXPÉRIENCE MAJEURE (DEVSECOPS, CLOUD, IA & FULLSTACK) ---
+  - titre: "Stage d'ingénieur -- DevSecOps & Architecture Système"
+    organisation: "Laboratoire RIADI (ENSI) & Hôpital Charles Nicolle (Projet NephroCare)"
+    periode: "06/2026 -- 07/2026"
+    localisation: "Tunis, Tunisie"
+    domaine: ["DevSecOps", "Cloud", "LLM", "FullStack", "Architecture"]
     points_cles:
-      - "Conception et modélisation de la base de données relationnelle pour le suivi longitudinal des greffes."
-      - "Développement full-stack de la plateforme avec gestion stricte des accès par rôles (RBAC)."
-      - "Sécurisation proactive : prévention des failles OWASP, chiffrement des données de santé et sessions sécurisées."
-    technologies: "Python, PostgreSQL, Sécurité Web, Docker, Git"
+      - "Refondation et réingénierie globale de la plateforme médicale critique NephroCare (suivi transplantation rénale) dans le cadre du consortium KTOuIP."
+      - "Conception MCD (PowerDesigner) et backend Spring Boot 3 (Java 17) découplé par DTO, interfacé avec React 18 / TypeScript."
+      - "Algorithme strict d'identito-vigilance validé par tests unitaires automatisés (JUnit 5, Mockito - 100% de succès)."
+      - "Intégration d'un assistant clinique fondé sur l'inférence locale d'un LLM souverain (FastAPI, Ollama / Mistral-7B) en environnement étanche (Air-Gapped)."
+      - "Pipeline complet DevSecOps (CI/CD GitHub Actions) avec Shift Left : SAST (SonarCloud Triple A), SCA (Snyk), audit conteneurs (Trivy), IaC (Terraform, Checkov, LocalStack) et DAST (OWASP ZAP)."
+      - "Suite d'observabilité système temps réel avec Prometheus, Grafana et centralisation des logs sous suite ELK."
+    technologies: "Spring Boot 3, React 18, TypeScript, FastAPI, Ollama, Docker, Terraform, GitHub Actions, ELK, Grafana, SonarCloud, Snyk, Trivy"
 
-  - titre: "Stage d'été -- Développement Mobile & Cloud"
+  # --- EXPÉRIENCE MOBILE & CLOUD ---
+  - titre: "Stage d'été -- Développement Mobile"
     organisation: "Instaal Studio"
     periode: "06/2025 -- 07/2025"
-    domaine: ["Mobile", "Computer Vision", "Cloud"]
+    localisation: "Kef, Tunisie"
+    domaine: ["Mobile", "Cloud", "Computer Vision"]
     points_cles:
-      - "Développement d'une application Flutter générant des images à partir de texte et d'images."
-      - "Intégration d'APIs REST, gestion de l'infrastructure cloud et optimisation du stockage."
-    technologies: "Flutter, Dart, REST API, Firebase, Cloudinary"
+      - "Développement d’une application Flutter générant des images à partir de texte et d'images via intégration d'APIs REST."
+      - "Gestion de l’infrastructure backend cloud et optimisation du stockage sécurisé des images."
+    technologies: "Flutter, Dart, REST API, Firebase, Cloudinary, Figma"
 
 projets:
-  # PROJET 1 : COMPUTER VISION
-  - titre: "Air Canvas -- Suivi Gestuel & Vision par Ordinateur"
+  # PROJET : COMPUTER VISION
+  - titre: "Air Canvas -- Vision par Ordinateur"
     periode: "02/2026 -- 03/2026"
     domaine: ["Computer Vision", "IA"]
     points_cles:
       - "Application interactive de dessin virtuel via suivi gestuel de la main en temps réel."
-      - "Détection précise des points de repère avec MediaPipe et traitement de flux vidéo via OpenCV."
+      - "Détection précise des repères de la main avec MediaPipe et traitement vidéo via OpenCV."
     technologies: "Python, OpenCV, MediaPipe, NumPy"
 
-  # PROJET 2 : CYBERSÉCURITÉ / DEVSECOPS
+  # PROJET : CYBERSÉCURITÉ OFFENSIVE / ML
   - titre: "Détection d'attaque par force brute sur SSH avec IA"
     periode: "02/2026 -- 03/2026"
     domaine: ["DevSecOps", "Cybersécurité", "IA"]
     points_cles:
-      - "Simulation d'attaques sous lab (Kali Linux, Hydra, Metasploitable) et extraction de logs d'authentification."
-      - "Entraînement d'un modèle ML pour détecter la signature de force brute indépendamment de l'adresse IP source."
-      - "Développement d'un dashboard interactif Cyber SOC avec Streamlit pour l'analyse de risque temps réel."
-    technologies: "Python, Scikit-learn, Pandas, Streamlit, Kali Linux, Hydra"
+      - "Simulation d'attaques en laboratoire (Kali Linux, Hydra, Metasploitable) et extraction de logs d'authentification réels."
+      - "Entraînement d’un modèle ML identifiant la signature d'attaque indépendamment de l'adresse IP source."
+      - "Interface Cyber SOC interactive sous Streamlit pour la visualisation des flux et l'analyse de risque temps réel."
+    technologies: "Python, Scikit-learn, Pandas, Plotly, Streamlit, Kali Linux, Hydra"
 
-  # PROJET 3 : IA EXPLICABLE / DATA
-  - titre: "XAI en Transplantation Rénale -- Laboratoire Riadi / Hôpital Charles-Nicolle"
-    periode: "10/2025 -- 05/2026"
-    domaine: ["Data", "IA"]
+  # PROJET : IA EXPLICABLE
+  - titre: "XAI en Transplantation Rénale -- Laboratoire Riadi"
+    periode: "10/2025 -- Présent"
+    domaine: ["IA", "Data"]
     points_cles:
-      - "Système d'Aide à la Décision prédictif pour les néphrologues avec explicabilité clinique (SHAP / LIME)."
+      - "Système d'Aide à la Décision prédictif avec explicabilité clinique (SHAP / LIME) pour néphrologues."
       - "Module administratif complet : persistance PostgreSQL et automatisation de rapports cliniques."
-    technologies: "Python, Scikit-learn, SHAP, LIME, PostgreSQL, Streamlit"
+    technologies: "Python, Scikit-learn, SHAP, LIME, Streamlit, PostgreSQL"
 
 competences_globales:
-  langages: "Python, Java, C, C++, Dart, JavaScript, PHP, SQL"
-  ia_data: "Pandas, NumPy, Scikit-learn, PySpark, OpenCV, MediaPipe, SHAP, LIME"
-  securite_ops: "OWASP, Cryptographie, Linux, Docker, Git, Réseaux TCP/IP (Cisco)"
+  langages: "Java, Python, TypeScript, JavaScript, SQL, C/C++, Dart"
+  backend_frontend: "Spring Boot, FastAPI, React, Node.js, Flutter"
+  devsecops_cicd: "GitHub Actions, SonarCloud, Snyk, Trivy, OWASP ZAP, Gitleaks, JUnit, Mockito"
+  cloud_iac_systemes: "Docker, Docker Compose, Terraform, LocalStack (AWS), Linux (Ubuntu, Kali)"
+  observabilite_logs: "Prometheus, Grafana, Suite ELK (Elasticsearch, Logstash, Kibana)"
+  ia_data: "Ollama, Mistral-7B, LangChain, Scikit-learn, SHAP, LIME, Counterfactual Explanations, OpenCV"
+  bases_de_donnees: "MySQL, PostgreSQL, Hibernate (JPA), PowerDesigner (MCD), UML"
