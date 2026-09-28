@@ -28,10 +28,10 @@ def charger_entreprises(chemin_csv:Path = ENTREPRISES_PATH) -> List[Dict[str, st
         raise FileNotFoundError(f"Le fichier {chemin_csv} est introuvable.")
 
     entreprises = []
-    with open(chemin_csv, "r", encoding="utf-8") as f:
+    with open(chemin_csv, "r", encoding="utf-8-sig") as f:
         lecteur = csv.DictReader(f, delimiter = ";")
         for ligne in lecteur:
-            ligne_nettoyee= {k.strip(): v.strip() for k, v in ligne.items() if k}
+            ligne_nettoyee= {k.strip().lower(): v.strip() for k, v in ligne.items() if k}
             entreprises.append(ligne_nettoyee)
 
 

@@ -1,349 +1,157 @@
 %-------------------------
-% Resume in Latex
-% Author : AlgoUniversity
+% Resume in Latex - Salma REZGUI
+% Format : 1 Page Haute Précision - Zéro Collision
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,9.5pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\frenchbsetup{StandardItemLabels=true}
+\usepackage[margin=0.45in, top=0.4in, bottom=0.4in]{geometry}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{fontawesome5}
-\usepackage{multicol}
-\usepackage[dvipsnames]{xcolor}
 \usepackage{xcolor}
-\usepackage{mdframed}
-\usepackage{graphicx}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.65in}
-\addtolength{\evensidemargin}{-0.55in}
-\addtolength{\textwidth}{1.3in}
-\addtolength{\topmargin}{-.85in}
-\addtolength{\textheight}{1.7in}
-
-\urlstyle{same}
-
+\pagestyle{empty}
 \raggedbottom
 \raggedright
-\setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Format propre des titres de section
 \titleformat{\section}{
-  \vspace{-4pt}\color{Black}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{Black}\titlerule \vspace{-5pt}]
+  \vspace{-3pt}\color{black}\scshape\raggedright\normalsize\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
+% Commandes de listes et titres (CALIBRÉES SANS SUPERPOSITION)
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
+  \item\small{{#1 \vspace{-1pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+  \vspace{1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-3pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, noitemsep, topsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
 
 \begin{document}
 
+% --- COORDONNÉES ---
 \begin{center}
-  {\Huge \scshape Salma REZGUI} \\ \vspace{5pt}
-   \small \raisebox{-0.1\height}\faPhone\ +216 54002220~ 
-  \href{mailto:salma.rezgui@ensi-uma.tn}{\raisebox{-0.2\height}\faEnvelope\  \underline{salma.rezgui@ensi-uma.tn}} ~
-  \href{https://www.linkedin.com/in/salma-rezgui}{\raisebox{-0.2\height}\faLinkedin\ \underline{salma-rezgui}}  ~
-  \href{https://github.com/ssalmarezgui
-  }{\raisebox{-0.2\height}\faGithub\ \underline{SalmaRezgui}} ~
-  \vspace{-8pt}
+  {\LARGE \scshape \textbf{Salma REZGUI}} \\ \vspace{2pt}
+  \small \faPhone\ \VAR{candidat_telephone} ~|~ 
+  \href{mailto:\VAR{candidat_email}}{\faEnvelope\ \underline{\VAR{candidat_email}}} ~|~ 
+  \href{https://\VAR{candidat_linkedin}}{\faLinkedin\ \underline{salma-rezgui}} ~|~ 
+  \href{https://\VAR{candidat_github}}{\faGithub\ \underline{SalmaRezgui}}
 \end{center}
-  \vspace{-5pt}
+\vspace{-6pt}
 
-%-----------Professional Summary-----------
-% \section{Professional Summary}
-
+% --- PROFESSIONAL SUMMARY DYNAMIQUE ---
 \begin{center}
-\begin{minipage}{0.95\textwidth}
-Étudiante ingénieure à l’ENSI, classée \textbf{3ème de promotion}, j'ambitionne de dépasser la seule maîtrise technique pour devenir une architecte des systèmes critiques. Passionnée par la cybersécurité et l'IA explicable, ma vision repose sur la protection de l'intégrité numérique par une conception rigoureuse. Je sollicite le Double Diplôme avec l’École Centrale de Lyon pour acquérir cette hauteur de vue systémique indispensable à la création de solutions robustes et résilientes. Mon leadership en tant que \textbf{Présidente de club} témoigne de ma volonté de m'investir pleinement au cœur de la vie centralienne.
+\begin{minipage}{0.98\textwidth}
+\small \VAR{resume_personnalise}
 \end{minipage}
 \end{center}
-\vspace{-10pt}
+\vspace{-6pt}
 
-%-----------EDUCATION-----------
+% --- FORMATION ---
 \section{Formation}
-
-% École Nationale des Sciences de l'Informatique (ENSI)
-\vspace{5pt}
-\textbf{École Nationale des Sciences de l'Informatique (ENSI)} \hfill \textit{2024 - Présent}\\
-Université du Manouba\\
-Cycle d'ingénieur en informatique – 2ème année
-
-\vspace{8pt}
-
-% Institut Préparatoire aux Études d'Ingénieurs de Nabeul (IPEIN)
-\textbf{Institut Préparatoire aux Études d'Ingénieurs de Nabeul (IPEIN)} \hfill \textit{2022 - 2024}\\
-Université de Carthage\\
-Diplôme du premier cycle préparatoire scientifique – MP
-
-\vspace{8pt}
-
-% Lycée 20 Mars 1956
-\textbf{Lycée 20 Mars 1956} \hfill \textit{2021 - 2022}\\
-Baccalauréat Scientifique - Mathématiques – Mention Bien
-
-\vspace{-10pt} % Ajustement de l'espace après la section
-
-
 \resumeSubHeadingListStart
-\section{Expériences Professionnelles}
-% Part-time job
-\resumeProjectHeading
-{\textbf{Part-time Job -- Design d’Interface}}{09/2025 - 01/2026}
-\resumeItemListStart
-    \resumeItem{Conception et amélioration d’interfaces utilisateurs pour différents projets internes.}
-    \resumeItem{Collaboration avec les développeurs pour assurer la cohérence entre le design et la fonctionnalité.}
-    \resumeItem{\textbf{Outils utilisés : } Figma}
-\resumeItemListEnd
-% Stage d'été
-\resumeSubheading
-{Stage d'été -- Développement Mobile}{06/2025 -- 07/2025}{Instaal Studio}{Kef, Tunisie}
-\resumeItemListStart
-\resumeItem{Conception et prototypage de l'interface utilisateur de l'application mobile.}
-\resumeItem{Développement d’une application Flutter générant des images à partir de texte, d’images ou d’une combinaison des deux}
-\resumeItem{Intégration d’APIs REST et mise en place du stockage des images sur le cloud.}
-\resumeItem{Gestion de l’infrastructure backend et optimisation des performances de l’application.}
-\resumeItem{\textbf{Technologies et outils : } Flutter, Dart, REST API, Firebase, Cloudinary, Figma}
-\resumeItemListEnd
+  \resumeSubheading
+    {École Nationale des Sciences de l'Informatique (ENSI)}{2024 -- Présent}
+    {Cycle d'Ingénieur en Informatique -- 2ème année (\textbf{Classée 3ème de promotion})}{Tunisie}
+  \resumeSubheading
+    {Institut Préparatoire aux Études d'Ingénieurs de Nabeul (IPEIN)}{2022 -- 2024}
+    {Diplôme du premier cycle préparatoire scientifique -- Filière MP}{Nabeul, Tunisie}
+\resumeSubHeadingListEnd
 
-% Enseignement d'été
-\resumeSubheading
-{Cours particuliers en mathématiques}{Été 2025}{Indépendant}{Tunisie}
-\resumeItemListStart
-\resumeItem{Accompagnement d’élèves dans la consolidation des bases en mathématiques.}
-\resumeItem{Adaptation des méthodes pédagogiques selon le niveau et les besoins de chaque élève.}
-\resumeItemListEnd
-\resumeItemListEnd
+% --- EXPÉRIENCES PROFESSIONNELLES ---
+\section{Expériences Professionnelles}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Stage d'ingénieur -- DevSecOps \& Architecture Système}{06/2026 -- 07/2026}
+    {Laboratoire RIADI (ENSI) \& Hôpital Charles Nicolle (NephroCare)}{Tunis, Tunisie}
+    \resumeItemListStart
+      \resumeItem{Refondation globale de la plateforme médicale critique \textbf{NephroCare} sous \textbf{Spring Boot} et \textbf{React}.}
+      \resumeItem{Pipeline DevSecOps complet (\textbf{CI/CD GitHub Actions}) : SAST (\textbf{SonarCloud}), SCA (\textbf{Snyk}), conteneurs (\textbf{Trivy}), IaC (\textbf{Terraform}), DAST (\textbf{OWASP ZAP}).}
+      \resumeItem{Assistant clinique fondé sur l'\textbf{inférence locale d'un LLM souverain} (FastAPI, Ollama / Mistral-7B) en environnement étanche (\emph{Air-Gapped}).}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Stage d'été -- Développement Mobile \& Cloud}{06/2025 -- 07/2025}
+    {Instaal Studio}{Kef, Tunisie}
+    \resumeItemListStart
+      \resumeItem{Développement d'une application Flutter générant des images à partir de texte et d'images via APIs REST et Firebase.}
+    \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-\vspace{-10pt}
 
-
-%-----------PROJECTS-----------
+% --- PROJETS (3 SÉLECTIONNÉS DYNAMIQUEMENT - SANS COLLISION) ---
 \section{Projets}
 \resumeSubHeadingListStart
-    \resumeProjectHeading
-    {\textbf{Air Canvas -- Vision par Ordinateur}}{02/2026 -- 03/2026}
+\BLOCK{for p in projets_selectionnes}
+  \resumeProjectHeading
+    {\textbf{\VAR{p.titre}}}{\VAR{p.periode}}
     \resumeItemListStart
-        \resumeItem{Développement d'une application interactive permettant de dessiner virtuellement via le suivi gestuel en temps réel.}
-        \resumeItem{Implémentation de la détection des points de repère de la main avec \textbf{MediaPipe} et traitement d'images via \textbf{OpenCV}.}
-        \resumeItem{\textbf{Technologies :} Python, OpenCV, MediaPipe, NumPy}
+      \BLOCK{for pt in p.points_cles}
+        \resumeItem{\VAR{pt}}
+      \BLOCK{endfor}
+      \resumeItem{\textbf{Technologies : }\VAR{p.technologies}}
     \resumeItemListEnd
-    \vspace{-16pt}
-    \resumeProjectHeading
-    {\textbf{Détection d'attaque par force brute sur SSH avec IA -- Projet Personnel}}{02/2026 -- 03/2026}
-    \resumeItemListStart
-        \resumeItem{Initiative personnelle visant à automatiser la détection des menaces réseau via l'analyse comportementale et le Machine Learning.}
-        \resumeItem{Mise en place d'un laboratoire de test complet (Kali Linux, Metasploitable 2) pour simuler des attaques réelles (Hydra) et générer des jeux de données de logs authentiques.}
-        \resumeItem{Développement d’un modèle capable d’identifier une signature d'attaque SSH par force brute indépendamment de l'adresse IP source.}
-        \resumeItem{Création d'une interface de monitoring "Cyber SOC" interactive permettant la visualisation dynamique des flux et l'analyse de risque instantanée.}
-        \resumeItem{\textbf{Technologies :} Python, Scikit-learn, Pandas, Plotly, Streamlit, Kali Linux, Hydra, Metasploitable}
-    \resumeItemListEnd
-    \vspace{-16pt}
-    \resumeProjectHeading
-    {\textbf{XAI en Transplantation Rénale -- Laboratoire Riadi -- Hôpital Charles-Nicolle }}{10/2025 -- Présent}
-    \resumeItemListStart
-        \resumeItem{Conception d’un Système d'Aide à la Décision (SAD) prédictif en collaboration avec des néphrologues.}
-        \resumeItem{Implémentation de l'IA explicable (SHAP/LIME) pour la transparence clinique et interface de simulation.}
-        \resumeItem{Développement d'un \textbf{module administratif complet} : gestion dynamique des tables, persistance des données cliniques en base de données et automatisation de la génération de rapports.}
-        \resumeItem{\textbf{Technologies :} Python, Scikit-learn, SHAP, LIME, Streamlit, SQL (PostgreSQL)}
-    \resumeItemListEnd
-    
-    \resumeProjectHeading
-    {\textbf{Site descriptif de l’association robotique ENSI}}{01/2025 -- 04/2025}
-    \resumeItemListStart
-        \resumeItem{Conception et développement du site vitrine pour promouvoir les activités du club.}
-        \resumeItem{\textbf{Technologies :} React.js, Figma}
-    \resumeItemListEnd
-    \vspace{-16pt}
-    \resumeProjectHeading
-    {\textbf{Site Web de Camping en Tunisie (Full-Stack)}}{12/2024 -- 03/2025}
-    \resumeItemListStart
-        \resumeItem{Portail web dynamique avec module d'administration sécurisé (CRUD) pour la gestion des lieux.}
-        \resumeItem{\textbf{Technologies :} HTML, CSS, JavaScript, PHP, MySQL}
-    \resumeItemListEnd
-    \vspace{-16pt}
-    \resumeProjectHeading
-    {\textbf{Mini-projets en Data Science (EDA \& ML)}}{}
-    \resumeItemListStart
-        \resumeItem{Analyse exploratoire et preprocessing sur datasets réels avec implémentation de modèles ML.}
-        \resumeItem{\textbf{Technologies :} Python, Pandas, NumPy, Scikit-learn, seaborn}
-    \resumeItemListEnd
-
+\BLOCK{endfor}
 \resumeSubHeadingListEnd
-\vspace{-10pt}
 
-%-----------PROGRAMMING SKILLS-----------
+% --- COMPÉTENCES TECHNIQUES ---
 \section{Compétences Techniques}
 \begin{itemize}[leftmargin=0.15in, label={}]
-  \item{
-     \textbf{Langages}{: Python, Java, C, C++, Dart, JavaScript, PHP, SQL, HTML/CSS} \\
-     \textbf{Frameworks \& Bibliothèques}{: React, Flutter, Flask, OpenCV, MediaPipe} \\
-     \textbf{Data Science \& IA}{: Pandas, NumPy, Scikit-learn, PySpark, SHAP, LIME, Streamlit} \\
-     \textbf{Réseaux \& Sécurité}{: Fondamentaux TCP/IP, \textbf{Cisco}, Cryptographie, Administration Linux} \\
-     \textbf{Bases de données \& Outils}{: PostgreSQL, MySQL, Firebase, Cloudinary, Git, Docker, Figma} \\
-  }
+  \small{\item{
+     \textbf{Langages : } Java , Python, TypeScript, JavaScript, SQL, C/C++, Dart \\
+     \textbf{DevSecOps \& Cloud : } Docker, Terraform, GitHub Actions, SonarCloud, Snyk, Trivy, OWASP ZAP, Linux \\
+     \textbf{Backend \& Frontend : } Spring Boot, FastAPI, React, Tailwind CSS, Flutter, PostgreSQL \\
+     \textbf{IA \& Data Science : } Ollama, Mistral-7B, LangChain, Scikit-learn, OpenCV, MediaPipe, SHAP, LIME
+  }}
 \end{itemize}
-\vspace{-15pt}
+\vspace{-6pt}
 
-
-
-%-----------CERTIFICATIONS-----------
-\section{Certifications}
+% --- LEADERSHIP & ENGAGEMENT ASSOCIATIF (CLUB HAPPINESS SEUL) ---
+\section{Leadership \& Vie Associative}
 \resumeSubHeadingListStart
-
-\resumeSubheading
-{Introduction to Cybersecurity}{03/2026}
-{Cisco Networking Academy}{}
-
-\resumeSubheading
-{SQL Fundamentals -- 26h}{09/2025}
-{DataCamp}{}
-
-\resumeSubheading
-{Introduction to AI Agents}{08/2025}
-{DataCamp}{}
-
-\resumeSubheading
-{Supervised Learning with scikit-learn}{07/2025}
-{DataCamp}{}
-
-\resumeSubheading
-{Intermediate GitHub Concepts \& Introduction to Git}{07/2025}
-{DataCamp}{}
-
-\resumeSubHeadingListEnd
-
-
-
-%-----------Vie Associative-----------
-\section{Vie Associative}
-\resumeSubHeadingListStart
-
-    % --- 1. CLUB HAPPINESS (Leadership & Gestion) ---
-    \resumeSubheading
-    {Présidente}{2025 -- Présent}
+  \resumeSubheading
+    {Présidente}{2025 -- 2026}
     {Club Happiness ENSI}{}
     \resumeItemListStart
-        \resumeItem{Direction stratégique du club et coordination d'une équipe pour promouvoir le bien-être étudiant.}
-        \resumeItem{Organisation d'événements majeurs et participation active au comité d'organisation du \textbf{Forum ENSI 2025}.}
-        \resumeItem{Gestion budgétaire et planification des initiatives annuelles.}
+      \resumeItem{Direction stratégique du club, coordination d'équipes et co-organisation du Forum ENSI 2025.}
+      \resumeItem{Gestion budgétaire et planification des initiatives annuelles pour promouvoir le bien-être étudiant.}
     \resumeItemListEnd
-    
-    % --- 2. ASSOCIATION ROBOTIQUE (Évolution : Logistique -> Coordination) ---
-    \resumeSubheading
-    {Coordinatrice Roboday \& Responsable Logistique}{2024 -- Présent}
-    {Association Robotique ENSI}{}
-    \resumeItemListStart
-        \resumeItem{\textbf{Coordination :} Supervision générale de l'événement Roboday 4.0 (planification, équipes).}
-        \resumeItem{\textbf{Logistique :} Gestion opérationnelle des compétitions RoboCup 7.0 et 8.0.}
-    \resumeItemListEnd
-
-    % --- 3. OSSEC (Compétences relationnelles & Techniques) ---
-    \resumeSubheading
-    {Membre Équipe Sponsoring \& Technique}{2024 -- 2025}
-    {Open Source Software ENSI Club (O.S.S.E.C)}{}
-    \resumeItemListStart
-        \resumeItem{\textbf{TuniHack 10.0 :} Recherche de sponsors, négociation et gestion des dossiers financiers.}
-        \resumeItem{\textbf{Linux Install Party :} Assistance technique et contribution à l'organisation.}
-    \resumeItemListEnd
-
-    % --- 4. AUTRES ENGAGEMENTS (Regroupés pour gagner de la place) ---
-    \resumeSubheading
-    {Membre Actif}{2024 -- Présent}
-    {Enactus, ORBYX, ECPC, CPS}{}
-    \resumeItemListStart
-        \resumeItem{Participation à des projets (Enactus) et de programmation compétitive (ECPC).}
-        \resumeItem{Contribution aux activités techniques et sociales des clubs ORBYX et CPS.}
-    \resumeItemListEnd
-
 \resumeSubHeadingListEnd
-%\vspace{-10pt} % Décommentez si vous avez besoin de gagner de l'espace
 
-
+% --- LANGUES ---
 \section{Langues}
 \begin{itemize}[leftmargin=0.15in, label={}]
-    \item{\textbf{Anglais :} B2 (EF SET) \hfill \textbf{Français :} Courant \hfill \textbf{Arabe :} Langue maternelle}
+  \small{\item{\textbf{Anglais : } B2 (EF SET) \hfill \textbf{Français : } Courant \hfill \textbf{Arabe : } Langue maternelle}}
 \end{itemize}
-\vspace{-15pt}
 
 \end{document}

@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages pour la langue et l'encodage
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Mise en page
+\usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{parskip} % Ajoute de l'espace entre les paragraphes
+\usepackage{hyperref} % Pour les liens (email, tel)
+
+% Désactiver la numérotation des pages
+\pagestyle{empty}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	COORDONNÉES
+%----------------------------------------------------------------------------------------
+
+% VOS COORDONNÉES
+\begin{flushleft}
+    \textbf{\VAR{candidat_nom}}\\
+    \VAR{candidat_telephone}\\
+    \href{mailto:\VAR{candidat_email}}{\VAR{candidat_email}}\\
+    \href{https://\VAR{candidat_linkedin}}{\VAR{candidat_linkedin}}
+\end{flushleft}
+
+\vspace{0.3cm}
+
+% DESTINATAIRE & DATE
+\begin{flushright}
+    \textbf{À l'attention de : \VAR{nom_contact}}\\
+    \textbf{\VAR{entreprise_nom}}\\
+    \vspace{0.3cm}
+    Fait à Tunis, le \VAR{date_du_jour}
+\end{flushright}
+
+\vspace{0.4cm}
+
+%----------------------------------------------------------------------------------------
+%	CORPS DE LA LETTRE
+%----------------------------------------------------------------------------------------
+
+% OBJET
+\textbf{Objet : Candidature -- \VAR{titre_poste}}
+
+\vspace{0.5cm}
+
+Madame, Monsieur,
+
+\VAR{corps_lettre}
+
+\vspace{0.6cm}
+
+Je vous remercie sincèrement de l’attention portée à ma démarche et me tiens à votre entière disposition pour un échange.
+
+\vspace{1.2cm}
+
+\begin{flushright}
+    \textbf{\VAR{candidat_nom}}\\
+    \textit{Élève Ingénieure -- ENSI}
+\end{flushright}
+
+\end{document}

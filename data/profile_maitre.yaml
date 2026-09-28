@@ -23,7 +23,7 @@ experiences:
     domaine: ["DevSecOps", "Cloud", "LLM", "FullStack", "Architecture"]
     points_cles:
       - "Refondation et réingénierie globale de la plateforme médicale critique NephroCare (suivi transplantation rénale) dans le cadre du consortium KTOuIP."
-      - "Conception MCD (PowerDesigner) et backend Spring Boot 3 (Java 17) découplé par DTO, interfacé avec React 18 / TypeScript."
+      - "Conception MCD (PowerDesigner) et backend Spring Boot découplé, interfacé avec React."
       - "Algorithme strict d'identito-vigilance validé par tests unitaires automatisés (JUnit 5, Mockito - 100% de succès)."
       - "Intégration d'un assistant clinique fondé sur l'inférence locale d'un LLM souverain (FastAPI, Ollama / Mistral-7B) en environnement étanche (Air-Gapped)."
       - "Pipeline complet DevSecOps (CI/CD GitHub Actions) avec Shift Left : SAST (SonarCloud Triple A), SCA (Snyk), audit conteneurs (Trivy), IaC (Terraform, Checkov, LocalStack) et DAST (OWASP ZAP)."
