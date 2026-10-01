@@ -16,8 +16,8 @@ formation:
 
 experiences:
   # --- EXPÉRIENCE MAJEURE (DEVSECOPS, CLOUD, IA & FULLSTACK) ---
-  - titre: "Stage d'ingénieur -- DevSecOps & Architecture Système"
-    organisation: "Laboratoire RIADI (ENSI) & Hôpital Charles Nicolle (Projet NephroCare)"
+  - titre: "Stage d'ingénieur -- DevSecOps"
+    organisation: "Laboratoire RIADI & Hôpital Charles Nicolle (Projet KTOuIP)"
     periode: "06/2026 -- 07/2026"
     localisation: "Tunis, Tunisie"
     domaine: ["DevSecOps", "Cloud", "LLM", "FullStack", "Architecture"]
@@ -25,22 +25,22 @@ experiences:
       - "Refondation et réingénierie globale de la plateforme médicale critique NephroCare (suivi transplantation rénale) dans le cadre du consortium KTOuIP."
       - "Conception MCD (PowerDesigner) et backend Spring Boot découplé, interfacé avec React."
       - "Algorithme strict d'identito-vigilance validé par tests unitaires automatisés (JUnit 5, Mockito - 100% de succès)."
-      - "Intégration d'un assistant clinique fondé sur l'inférence locale d'un LLM souverain (FastAPI, Ollama / Mistral-7B) en environnement étanche (Air-Gapped)."
+      - "Intégration d'un assistant clinique fondé sur l'inférence locale d'un LLM(FastAPI, Ollama / Mistral-7B)."
       - "Pipeline complet DevSecOps (CI/CD GitHub Actions) avec Shift Left : SAST (SonarCloud Triple A), SCA (Snyk), audit conteneurs (Trivy), IaC (Terraform, Checkov, LocalStack) et DAST (OWASP ZAP)."
       - "Suite d'observabilité système temps réel avec Prometheus, Grafana et centralisation des logs sous suite ELK."
-    technologies: "Spring Boot 3, React 18, TypeScript, FastAPI, Ollama, Docker, Terraform, GitHub Actions, ELK, Grafana, SonarCloud, Snyk, Trivy"
+    technologies: "Spring Boot, React, TypeScript, FastAPI, Ollama, Docker, Terraform, GitHub Actions, ELK, Grafana, SonarCloud, Snyk, Trivy"
 
   # --- EXPÉRIENCE MOBILE & CLOUD ---
-  - titre: "Stage d'été -- Développement Mobile"
+  - titre: "Stage d'été -- Développement Mobile & Cloud"
     organisation: "Instaal Studio"
     periode: "06/2025 -- 07/2025"
     localisation: "Kef, Tunisie"
     domaine: ["Mobile", "Cloud", "Computer Vision"]
     points_cles:
-      - "Développement d’une application Flutter générant des images à partir de texte et d'images via intégration d'APIs REST."
-      - "Gestion de l’infrastructure backend cloud et optimisation du stockage sécurisé des images."
+      - "Développement d’une application Flutter générant des images à partir de texte et d’images via intégration d'APIs REST."
+      - "Conception de l'architecture cloud avec Firebase et Cloudinary pour l'optimisation du stockage sécurisé et des performances."
     technologies: "Flutter, Dart, REST API, Firebase, Cloudinary, Figma"
-
+    
 projets:
   # PROJET : COMPUTER VISION
   - titre: "Air Canvas -- Vision par Ordinateur"
@@ -63,7 +63,7 @@ projets:
 
   # PROJET : IA EXPLICABLE
   - titre: "XAI en Transplantation Rénale -- Laboratoire Riadi"
-    periode: "10/2025 -- Présent"
+    periode: "10/2025 -- 05/2026"
     domaine: ["IA", "Data"]
     points_cles:
       - "Système d'Aide à la Décision prédictif avec explicabilité clinique (SHAP / LIME) pour néphrologues."

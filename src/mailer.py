@@ -43,7 +43,6 @@ def preparer_corps_email(nom_candidat: str, entreprise: str, titre_poste: str,
         {nom_candidat}
         Élève Ingénieure -- ENSI
         Tél : +216 54 00 22 20
-        LinkedIn : https://linkedin.com/in/salma-rezgui
         """
     else:
         # Cas d'une réponse à une offre existante
@@ -61,7 +60,6 @@ def preparer_corps_email(nom_candidat: str, entreprise: str, titre_poste: str,
         {nom_candidat}
         Élève Ingénieure -- ENSI
         Tél : +216 54 00 22 20
-        LinkedIn : https://linkedin.com/in/salma-rezgui
         """
     return sujet, corps
 
