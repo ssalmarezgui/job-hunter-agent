@@ -1,10 +1,13 @@
 import json
+import os
 import sys
 
 import requests
 from typing import Dict, Any, List
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+
+OLLAMA_BASE = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_URL = f"{OLLAMA_BASE}/api/generate"
 MODEL_NAME = "mistral"
 
 def interroger_mistral(prompt: str, system_prompt: str = "") -> str:

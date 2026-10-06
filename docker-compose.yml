@@ -1,0 +1,37 @@
+# permet de declarer l'architecture sous forme de code (IAC) 
+
+version: '3.8'
+# la version son role est de faire la compatibilité avec les versions de docker-compose
+
+
+# les services sont les conteneurs qui vont tourner dans notre architecture
+services:
+  job-hunter:
+    build:
+      context: . # c'est le chemin du dockerfile
+      dockerfile: Dockerfile
+    container_name: job_hunter_studio # nom du conteneur
+    restart: unless-stopped #  une option pour redémarrer le conteneur sauf si on l'arrête manuellement
+
+    ports:
+      - "8501:8501" # le port 8501 de l'hôte sera redirigé vers le port 8501 du conteneur
+
+    # Le fichier .env est lu par Docker Compose sans être gravé dans l'image
+    env_file:
+      - .env # le fichier .env contient les variables d'environnement pour le conteneur
+
+    # Vairiables d'environnement dynamiques    
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434 # variable d'environnement pour le conteneur
+      # host.docker.internal est une adresse IP spéciale qui permet au conteneur d'accéder à l'hôte Docker via localhost. Cela est utile pour les applications qui doivent communiquer avec des services exécutés sur l'hôte Docker.
+
+      - MODE_SIMULATION=${MODE_SIMULATION:-True} # variable d'environnement pour le conteneur, si la variable d'environnement MODE_SIMULATION n'est pas définie, elle prendra la valeur True par défaut
+
+    # Ce qui est écrit dans /app/data reste sauvegardé sur le disque local
+    volumes:
+      - ./data:/app/data # :/app/data est le chemin du conteneur, ./data est le chemin de l'hôte
+      - ./templates:/app/templates 
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # permet de faire le lien entre le conteneur et l'hôte Docker
+    

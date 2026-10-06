@@ -13,10 +13,10 @@ ENV PYTHONDONTWRITEBYTECODE=1\
 
 # Install dependencies juste for latex and fonts because we need to compile the latex files into pdfs nothing else
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    textlive-latex-base \
-    textlive-latex-recommended \
-    testlive-latex-extra \
-    textlive-fonts-recommended \
+    texlive-latex-base \
+    texlive-latex-recommended \
+    texlive-latex-extra \
+    texlive-fonts-recommended \
     lmodern \
     fonts-font-awesome \
     ca-certificates \
