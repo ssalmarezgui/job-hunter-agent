@@ -35,8 +35,9 @@ WORKDIR /app
 # Copy the requirements.txt file into the container at /app
 COPY requirements.txt .
 # Install the dependencies from requirements.txt using pip, with no cache to reduce image size and upgrade pip to the latest version
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+#RUN pip install --no-cache-dir --upgrade pip && \
+ #   pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com -r requirements.txt
 
 # Copy the rest of the application code into the container at /app and change ownership of the /app directory to the non-root user and group created earlier
 COPY . .
@@ -54,4 +55,4 @@ EXPOSE 8501
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health || exit 1
 # CMD instruction specifies the command to run when the container starts. In this case, it runs the Streamlit application defined in app.py, listening on port 8501 and accessible from any network interface ( for example, if you want to access the application from your host machine or from other containers in the same network). 
 # The CMD instruction can be overridden at runtime by specifying a different command when starting the container.
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["python", "-m", "streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]

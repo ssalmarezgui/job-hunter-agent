@@ -1,4 +1,5 @@
 from datetime import datetime
+from dbm import sqlite3
 from pathlib import Path
 
 import streamlit as st
@@ -277,18 +278,21 @@ with tab_studio:
 
 with tab_suivi:
     st.header("Historique et Statut de vos Candidatures")
-    import sqlite3
-    import pandas as pd
 
     if Path("data/candidatures.db").exists():
         with sqlite3.connect("data/candidatures.db") as conn:
-            df_candidatures = pd.read_sql_query("SELECT id, entreprise, email_recruteur, titre_poste, domaine, date_envoi, statut FROM candidatures ORDER BY date_envoi DESC", conn)
-        
-        st.metric("Total Candidatures Expédiées", len(df_candidatures))
-        st.dataframe(df_candidatures, use_container_width=True)
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            lignes = cursor.execute(
+                "SELECT id, entreprise, email_recruteur, titre_poste, domaine, date_envoi, statut "
+                "FROM candidatures ORDER BY date_envoi DESC"
+            ).fetchall()
+            donnees = [dict(ligne) for ligne in lignes]
+
+        st.metric("Total Candidatures Expédiées", len(donnees))
+        st.dataframe(donnees, use_container_width=True)
     else:
         st.info("Aucune candidature n'a encore été enregistrée dans la base.")
-
 
 
 

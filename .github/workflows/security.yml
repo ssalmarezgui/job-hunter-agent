@@ -25,6 +25,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    # Audit SAST DU code python (Bandit)
+      - name: Configuration de Python pour Bandit
+        uses: actions/setup-python@v5 # action officielle pour configurer l'environnement Python afin d'exécuter des outils de sécurité comme Bandit
+        with:
+          python-version: "3.11" # version de Python à utiliser pour l'analyse SAST
+      
+      - name: Installation et EXECUTION du SAST (Bandit)
+        run: |
+          pip install bandit
+          bandit -r src/ -ll
+        # Scanne le dossier src/ et échoue uniquement si une faille HIGH ou CRITICAL est trouvée (-ll)
+
     # Preparation du Moteur GITHUB
       - name: Configuration de Docker Buildx # Buildx assure que l'image Docker est construite de manière efficace et compatible avec plusieurs architectures.
         uses: docker/setup-buildx-action@v3

@@ -1,0 +1,6 @@
+requests
+pyyaml
+pydantic
+python-dotenv
+jinja2
+streamlit
