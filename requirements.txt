@@ -4,3 +4,4 @@ pydantic
 python-dotenv
 jinja2
 streamlit
+bandit

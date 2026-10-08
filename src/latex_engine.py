@@ -1,6 +1,6 @@
 from datetime import datetime
 from pathlib import Path
-import subprocess
+import subprocess  # nosec B404: Subprocess contrôlé pour l'appel à pdflatex
 from typing import Any
 
 import jinja2
@@ -20,7 +20,7 @@ latex_env = jinja2.Environment(
     line_statement_prefix='%%',
     line_comment_prefix='%#',
     trim_blocks=True,
-    autoescape=False,
+    autoescape=False,  # nosec B701: Template LaTeX (non-HTML), désinfection gérée par desinfecter_texte_latex
     loader=jinja2.FileSystemLoader(str(TEMPLATES_DIR.resolve()))
 )
 
@@ -83,7 +83,7 @@ def compiler_latex_en_pdf(nom_template: str, contexte: dict[str, Any], nom_fichi
     ]
 
     print(f"[*] Compilation LaTeX de {fichier_tex.name} en cours...")
-    resultat = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    resultat = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)  # nosec B603
 
     if resultat.returncode != 0:
         raise RuntimeError(f"Erreur de compilation LaTeX. Consultez le fichier {OUTPUT_DIR / f'{nom_fichier_base}.log'}")

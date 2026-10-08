@@ -24,7 +24,7 @@ def interroger_mistral(prompt: str, system_prompt: str = "") -> str:
     }
     texte_complet = []
     try:
-        response = requests.post(OLLAMA_URL, json=payload, stream=True, timeout=None)
+        response = requests.post(OLLAMA_URL, json=payload, stream=True, timeout=(10, 300))
         response.raise_for_status()
 
         for line in response.iter_lines():
