@@ -1,0 +1,47 @@
+name: DevSecOps Pipeline - Security & Container Auditing
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  security-audit: 
+    name: Audit Sécurité (Gitleaks & Trivy)
+    runs-on: ubuntu-latest
+
+
+    steps:
+    # Recuperation du code source du dépôt GitHub
+      - name: Checkout du code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+    # SCAN SECRETS (Gitleaks)
+      - name: Scan des secrets avec Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Preparation du Moteur GITHUB
+      - name: Configuration de Docker Buildx # Buildx assure que l'image Docker est construite de manière efficace et compatible avec plusieurs architectures.
+        uses: docker/setup-buildx-action@v3
+      
+    # CONSTRUCTION DE L'IMAGE DOCKER SUR LE RUNNER GITHUB
+      - name: Build de l'image Docker
+        run: |
+          docker build -t job-hunter:latest .
+
+    # SCAN VULNERABILITES DU CONTENEUR : Trivy
+      - name: Audit de sécurité de l'image avec Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'job-hunter:latest'
+          format: 'table'
+          severity: 'CRITICAL,HIGH'
+          ignore-unfixed: true # ignore les vulnérabilités non corrigées pour éviter les faux positifs
+          exit-code: '0' # exit-code 0 pour ne pas échouer le job en cas de vulnérabilités détectées, mais pour les signaler dans le rapport.
+          #  # Mettre à '1' si on veut bloquer le pipeline en cas de faille critique
+

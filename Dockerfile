@@ -35,7 +35,7 @@ WORKDIR /app
 # Copy the requirements.txt file into the container at /app
 COPY requirements.txt .
 # Install the dependencies from requirements.txt using pip, with no cache to reduce image size and upgrade pip to the latest version
-RUN pip install --no-cache-dire --upgarde pip && \
+RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application code into the container at /app and change ownership of the /app directory to the non-root user and group created earlier
