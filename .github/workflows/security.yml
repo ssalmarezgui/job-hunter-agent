@@ -15,13 +15,13 @@ jobs:
     steps:
     # Recuperation du code source du dépôt GitHub
       - name: Checkout du code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # checkout c'est-à-dire récupérer le code source du dépôt GitHub pour l'analyser
         with:
           fetch-depth: 0
 
     # SCAN SECRETS (Gitleaks)
       - name: Scan des secrets avec Gitleaks
-        uses: gitleaks/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v2 # action officielle de Gitleaks pour scanner le code source à la recherche de secrets exposés
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -36,7 +36,7 @@ jobs:
 
     # SCAN VULNERABILITES DU CONTENEUR : Trivy
       - name: Audit de sécurité de l'image avec Trivy
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@master # action officielle de Trivy pour scanner les images Docker à la recherche de vulnérabilités
         with:
           image-ref: 'job-hunter:latest'
           format: 'table'
