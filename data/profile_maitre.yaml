@@ -42,6 +42,16 @@ experiences:
     technologies: "Flutter, Dart, REST API, Firebase, Cloudinary, Figma"
     
 projets:
+  # PROJET : DEVSECOPS & IA MULTI-AGENTS
+  - titre: "Job Hunter Agent -- Studio DevSecOps & IA Multi-Agents"
+    periode: "09/2026 -- Présent"
+    domaine: ["DevSecOps", "Cloud", "LLM", "IA", "FullStack"]
+    points_cles:
+      - "Architecture d'une plateforme d'IA Multi-Agents (Mistral-7B local + OpenRouter) avec génération dynamique de CV/Lettres sous LaTeX et dédoublonnage transactionnel SQLite."
+      - "Pipeline DevSecOps Shift-Left complet (GitHub Actions) : détection de secrets (Gitleaks), SAST (Bandit) et audit de vulnérabilités conteneurs (Trivy)."
+      - "Conteneurisation durcie sous Docker (utilisateur non-root appuser, PoLP) et déploiement continu GitOps sous Streamlit Cloud avec protection cryptographique anti-timing attacks."
+    technologies: "Python, Docker, Streamlit, LaTeX, GitHub Actions, Trivy, Gitleaks, Bandit, SQLite, Ollama, OpenRouter"
+    
   # PROJET : COMPUTER VISION
   - titre: "Air Canvas -- Vision par Ordinateur"
     periode: "02/2026 -- 03/2026"
