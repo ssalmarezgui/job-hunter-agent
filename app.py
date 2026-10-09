@@ -1,5 +1,6 @@
 from datetime import datetime
 from dbm import sqlite3
+import os
 from pathlib import Path
 
 import streamlit as st
@@ -11,12 +12,56 @@ from src.loader import charger_entreprises, charger_profil_maitre, selectionner_
 from src.mailer import MODE_SIMULATION, envoyer_candidature_email, preparer_corps_email
 from src.ollama_client import generer_lettre_motivation, generer_resume_cv
 from src.openrouter_client import critique_et_correction_texte
+import secrets
 
 st.set_page_config(
     page_title = "Job Hunter Studio - Salma REZGUI",
     page_icon = "🎯",
     layout = "wide" #toute la largeur de l'ecran
 )
+
+# CONTROLE D'ACCES & AUTHENTIFICATION 
+def verifier_authentification() -> bool:
+    """Affiche un écran de connexion strict sans aucun mot de passe en clair dans le code."""
+    if st.session_state.get("authentifie", False):
+        return True
+
+    # Récupération sécurisée depuis les variables d'environnement (.env ou Cloud Secrets)
+    # ZÉRO valeur par défaut : si non configuré, l'accès est totalement verrouillé
+    ADMIN_USER = os.getenv("ADMIN_USER")
+    ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
+
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.markdown("<br><br>", unsafe_allow_html=True)
+        st.title("🔒 Job Hunter - Accès Sécurisé")
+        st.markdown("Veuillez vous authentifier pour accéder à votre espace de candidature.")
+
+        if not ADMIN_USER or not ADMIN_PASSWORD:
+            st.error("Configuration de sécurité manquante : ADMIN_USER ou ADMIN_PASSWORD non défini.")
+            return False
+
+        with st.form("login_form"):
+            user_input = st.text_input("Identifiant")
+            password_input = st.text_input("Mot de passe", type="password")
+            submit = st.form_submit_button("Se connecter", type="primary")
+
+            if submit:
+                # secrets.compare_digest compare en temps constant (Protection contre les Timing Attacks CWE-208)
+                user_valide = secrets.compare_digest(user_input.strip(), ADMIN_USER.strip())
+                pass_valide = secrets.compare_digest(password_input.strip(), ADMIN_PASSWORD.strip())
+
+                if user_valide and pass_valide:
+                    st.session_state.authentifie = True
+                    st.rerun()
+                else:
+                    st.error("Identifiant ou mot de passe incorrect.")
+    return False
+
+# Blocage strict si non authentifié
+if not verifier_authentification():
+    st.stop()
+
 
 #  AFFICHAGE DE PDF 
 def afficher_pdf(chemin_pdf: Path):
