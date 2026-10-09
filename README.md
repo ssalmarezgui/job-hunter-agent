@@ -16,16 +16,16 @@
 ## 🏛️ Architecture Système (Pipeline Global)
 ```mermaid
 flowchart TD
-    A["📂 Données : Profil Maître YAML & Cibles CSV"] --> B["⚙️ Algorithme de Scoring & Sélection"]
-    B --> C["🤖 Agent 1 : Générateur Local (Mistral-7B)"]
-    C --> D["🔍 Agent 2 : Critique & Relecteur (OpenRouter)"]
-    D --> E["📄 Moteur LaTeX (pdflatex / TeX Live)"]
-    E --> F["📑 2 PDFs Générés : CV & Lettre 1 Page"]
-    F --> G["💻 Studio Web Streamlit"]
-    G --> H{"🛑 Validation Humaine"}
-    H -->|Rejet / Skip| I["❌ Abandon sans envoi"]
-    H -->|Validation| J["🛡️ Contrôle Anti-Doublon SQLite"]
-    J --> K["🚀 Expédition SMTP & Archivage CRM"]
+    A["Donnees : Profil Maitre YAML et Cibles CSV"] --> B["Algorithme de Scoring et Selection"]
+    B --> C["Agent 1 : Generateur Local Mistral-7B"]
+    C --> D["Agent 2 : Critique et Relecteur OpenRouter"]
+    D --> E["Moteur LaTeX pdflatex"]
+    E --> F["2 PDFs Generes : CV et Lettre 1 Page"]
+    F --> G["Studio Web Streamlit"]
+    G --> H{"Validation Humaine"}
+    H -->|Rejet| I["Abandon sans envoi"]
+    H -->|Validation| J["Controle Anti-Doublon SQLite"]
+    J --> K["Expedition SMTP et Archivage CRM"]
 ```
 
 ---
